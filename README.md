@@ -140,4 +140,8 @@ pnpm lint
 
 ## TSでの`.vue`インポートのタイプサポート
 
-TypeScriptはデフォルトで`.vue`インポートの型情報を処理できないため、タイプチェックに`tsc` CLIの代わりに`vue-tsc`を使用します。エディタでは、[Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)を使用して、TypeScript言語サービスが
+TypeScriptはデフォルトで`.vue`インポートの型情報を処理できないため、タイプチェックに`tsc` CLIの代わりに`vue-tsc`を使用します。エディタでは、[Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)を使用して、TypeScript言語サービスが`.vue`型を認識できるようにする必要があります。
+
+## 設定のカスタマイズ
+
+[Vite設定リファレンス](https://vite.dev/config/)をご覧ください。
