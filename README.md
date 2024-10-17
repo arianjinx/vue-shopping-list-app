@@ -2,6 +2,8 @@
 
 This project is a proof of learning from the [Vue.js 3 Fundamentals with the Composition API](https://vueschool.io/courses/vue-js-fundamentals-with-the-composition-api) course.
 
+You can view a live demo of this project at [https://vue-shopping-list-app.pages.dev/](https://vue-shopping-list-app.pages.dev/). The application is hosted on Cloudflare Pages.
+
 ## Key Learnings
 
 - Vue.js 3 offers powerful built-in features for handling application state.
@@ -76,6 +78,8 @@ See [Vite Configuration Reference](https://vite.dev/config/).
 # vue-ショッピングリストアプリ
 
 このプロジェクトは、[Vue.js 3 Fundamentals with the Composition API](https://vueschool.io/courses/vue-js-fundamentals-with-the-composition-api)コースからの学習の証明です。
+
+このプロジェクトのライブデモは[https://vue-shopping-list-app.pages.dev/](https://vue-shopping-list-app.pages.dev/)で見ることができます。アプリケーションはCloudflare Pagesでホストされています。
 
 ## 主な学び
 
