@@ -9,7 +9,7 @@ interface Item {
   highPriority: boolean
 }
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
 const header = computed(() => t('shoppingList.header'))
 
@@ -67,6 +67,8 @@ const localeMap: Record<string, string> = {
   en: 'English',
   ja: '日本語',
 }
+
+const minItemLength = computed(() => (locale.value === 'ja' ? 2 : 5))
 </script>
 
 <template>
@@ -89,20 +91,22 @@ const localeMap: Record<string, string> = {
       {{ $t('shoppingList.addItem') }}
     </button>
   </div>
+
   <form class="add-item-form" v-if="editing" @submit.prevent="saveItem">
     <input
       v-model.trim="newItem"
       type="text"
       :placeholder="$t('shoppingList.addItemPlaceholder')"
     />
-    <label>
+    <label class="checkbox-label">
       <input type="checkbox" v-model="newItemHighPriority" />
       {{ $t('shoppingList.highPriority') }}
     </label>
-    <button :disabled="newItem.length < 5" class="btn btn-primary">
+    <button :disabled="newItem.length < minItemLength" class="btn btn-primary">
       {{ $t('shoppingList.saveItem') }}
     </button>
   </form>
+
   <ul>
     <li
       v-for="item in reversedItems"
